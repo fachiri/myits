@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>myITS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/layout-rtl-backup.css" />
+    <link rel="stylesheet" href="/assets/app-dark.css" />
+    <link rel="stylesheet" href="/assets/app.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />  
+    <style>
+      * {
+        font-family: 'Nunito', sans-serif;
+      }
+      .tab-btn {
+        cursor: pointer;
+      }
+      .tab-btn.active {
+        border-bottom: 2px solid blue;
+        color: blue !important;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="assets/initTheme.js"></script>
+    <div id="app" style="background-color: #F0F2F5;">
+      <div id="header"></div>
+      <div id="sidebar">
+        <div class="sidebar-wrapper active">
+          <div class="sidebar-header position-relative">
+            <div class="d-flex align-items-center mb-3">
+              <img src="assets/logo.png" alt="Logo" height="40">
+              <h1 class="fs-5 m-0 ms-2">StudentConnect</h1>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="logo">
+                <a href="index.html" class="d-flex align-items-center">
+                  <img
+                    src="/assets/profile.png"
+                    alt="Logo"
+                    style="width: 50px; height:50px"
+                  />
+                  <div class="ms-3 mb-2">
+                    <span class="text-secondary" style="font-size: .8rem;">Mahasiswa</span>
+                    <h1 class="fs-6 text-primary">Tiara Andini</h1>
+                  </div>
+                </a>
+              </div>
+              <div class="sidebar-toggler x">
+                <a href="javascript:void(0)" class="sidebar-hide d-xl-none d-block"
+                  ><i class="bi bi-x bi-middle"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-menu">
+            <ul class="menu">
+              <li class="sidebar-item">
+                <a href="#beranda" class="navBtn sidebar-link">
+                  <img src="assets/beranda.png" alt="Logo Beranda" height="20">
+                  <span>Beranda</span>
+                </a>
+              </li>
+        
+              <li class="sidebar-item has-sub">
+                <a href="javascript:void(0)" class="sidebar-link">
+                  <img src="assets/beasiswa.png" alt="Logo Beasiswa" height="20">
+                  <span>Beasiswa</span>
+                </a>
+                <ul class="submenu">
+                  <li class="submenu-item">
+                    <a href="javascript:void(0)" class="submenu-link">Sub Menu</a>
+                  </li>
+                </ul>
+              </li>
+        
+              <li class="sidebar-item has-sub">
+                <a href="javascript:void(0)" class="sidebar-link">
+                  <img src="assets/magang.png" alt="Logo magang" height="20">
+                  <span>Magang</span>
+                </a>
+                <ul class="submenu">
+                  <li class="submenu-item">
+                    <a href="javascript:void(0)" class="submenu-link">Sub Menu</a>
+                  </li>
+                </ul>
+              </li>
+        
+              <li class="sidebar-item has-sub">
+                <a href="javascript:void(0)" class="sidebar-link">
+                  <img src="assets/studi.png" alt="Logo studi" height="20">
+                  <span>Studi Independen</span>
+                </a>
+                <ul class="submenu">
+                  <li class="submenu-item">
+                    <a href="javascript:void(0)" class="submenu-link">Sub Menu</a>
+                  </li>
+                </ul>
+              </li>
+        
+              <li class="sidebar-item has-sub">
+                <a href="javascript:void(0)" class="sidebar-link">
+                  <img src="assets/kewira.png" alt="Logo kewira" height="20">
+                  <span>Kewirausahaan</span>
+                </a>
+                <ul class="submenu">
+                  <li class="submenu-item">
+                    <a href="#kegiatan-saya" class="navBtn submenu-link">Kegiatan Saya</a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="#dana-hibah" class="navBtn submenu-link">Dana Hibah</a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="#jadwal-skim" class="navBtn submenu-link">Jadwal SKIM</a>
+                  </li>
+                </ul>
+              </li>
+        
+              <li class="sidebar-item has-sub">
+                <a href="javascript:void(0)" class="sidebar-link">
+                  <img src="assets/berkas.png" alt="Logo berkas" height="20">
+                  <span>Berkas</span>
+                </a>
+                <ul class="submenu">
+                  <li class="submenu-item">
+                    <a href="javascript:void(0)" class="submenu-link">Sub Menu</a>
+                  </li>
+                </ul>
+              </li>
+        
+              <li class="sidebar-item has-sub">
+                <a href="javascript:void(0)" class="sidebar-link">
+                  <img src="assets/porto.png" alt="Logo porto" height="20">
+                  <span>Portofolio</span>
+                </a>
+                <ul class="submenu">
+                  <li class="submenu-item">
+                    <a href="javascript:void(0)" class="submenu-link">Sub Menu</a>
+                  </li>
+                </ul>
+              </li>
+        
+              <li class="sidebar-item">
+                <a href="javascript:void(0)" class="sidebar-link">
+                  <img src="assets/skem.png" alt="Logo skem" height="20">
+                  <span>SKEM</span>
+                </a>
+              </li>
+        
+              <li class="sidebar-item">
+                <a href="javascript:void(0)" class="sidebar-link">
+                  <img src="assets/skpi.png" alt="Logo skpi" height="20">
+                  <span>SKPI</span>
+                </a>
+              </li>
+        
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="main">
+        <div id="content"></div>
+        <div id="footer"></div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="render.js"></script>
+  </body>
+</html>
