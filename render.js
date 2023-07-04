@@ -198,6 +198,7 @@ function initPage() {
   linkStyles.forEach(link => {
     const currentHref = link.getAttribute('href');
     const updatedHref = window.location.origin + currentHref;
+    console.log(updatedHref)
     link.setAttribute('href', updatedHref);
   });
 
