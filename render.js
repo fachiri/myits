@@ -136,27 +136,39 @@ const portofolioKegiatan = [
   },
 ]
 
-// Fungsi untuk memuat konten halaman dari file dan menggabungkannya dengan template
-function renderPage(pagePath, data) {
-  fetch(pagePath)
-      .then((response) => response.text())
-      .then((pageContent) => {
-          // Compile template halaman menjadi fungsi
-          var template = Handlebars.compile(pageContent);
-          // Render template halaman dengan data yang diberikan
-          var result = template(data);
-          // Tempelkan hasil rendering halaman ke dalam elemen dengan ID "content"
-          document.getElementById("content").innerHTML = result;
-          // Panggil fungsi initPage() untuk menginisialisasi JavaScript di halaman baru
+const jadwalSkim = [
+  {
+    judul: 'ITS Youth Technopreneur',
+    mulai: '20 Feb 2023',
+    selesai: '27 Mei 2023',
+    tautan: '#informasi-skim'
+  },
+  {
+    judul: 'Inovasi Wirausaha Digital Mahasiswa (IWDM2022)',
+    mulai: '16 Aug 2022',
+    selesai: '21 Sep 2022',
+    tautan: null
+  },
+  {
+    judul: 'Program Pembinaan Mahasiswa Wirausaha',
+    mulai: '20 Feb 2023',
+    selesai: '27 Mei 2023',
+    tautan: null
+  },
+  {
+    judul: 'ITS Youth Technopreneur',
+    mulai: '20 Feb 2023',
+    selesai: '27 Mei 2023',
+    tautan: null
+  },
+  {
+    judul: 'ITS Youth Technopreneur',
+    mulai: '20 Feb 2023',
+    selesai: '27 Mei 2023',
+    tautan: null
+  },
+]
 
-          initPage();
-      })
-      .catch((error) => {
-          console.error('Gagal memuat halaman:', error);
-      });
-}
-
-// Data yang akan diisi ke dalam template header dan footer
 let headerData = {
   title: "Judul Situs"
 };
@@ -165,7 +177,21 @@ let footerData = {
   year: new Date().getFullYear()
 };
 
-// Render header dan footer
+function renderPage(pagePath, data) {
+  fetch(pagePath)
+      .then((response) => response.text())
+      .then((pageContent) => {
+          var template = Handlebars.compile(pageContent);
+          var result = template(data);
+          document.getElementById("content").innerHTML = result;
+
+          initPage();
+      })
+      .catch((error) => {
+          console.error('Gagal memuat halaman:', error);
+      });
+}
+
 fetch('layouts/header.html')
   .then((response) => response.text())
   .then((headerContent) => {
@@ -173,7 +199,6 @@ fetch('layouts/header.html')
       let headerResult = headerTemplate(headerData);
       document.getElementById("header").innerHTML = headerResult;
 
-      // Render footer setelah header selesai
       fetch('layouts/footer.html')
           .then((response) => response.text())
           .then((footerContent) => {
@@ -181,9 +206,8 @@ fetch('layouts/header.html')
               let footerResult = footerTemplate(footerData);
               document.getElementById("footer").innerHTML = footerResult;
 
-              // Setelah header dan footer selesai, render halaman pertama di folder 'pages'
-              renderPage('pages/beranda.html', { title: 'Beranda' });
-              // renderPage('pages/portofolio-kompetisi.html', { title: 'Portofolio', portofolioKegiatan });
+              // renderPage('pages/beranda.html', { title: 'Beranda' });
+              renderPage('pages/tambah-ajuan.html', { title: 'Beranda' });
           })
           .catch((error) => {
               console.error('Gagal memuat footer:', error);
@@ -194,14 +218,6 @@ fetch('layouts/header.html')
   });
 
 function initPage() {
-  // const linkStyles = document.querySelectorAll("link[custom='true']");
-  // linkStyles.forEach(link => {
-  //   const currentHref = link.getAttribute('href');
-  //   const updatedHref = window.location.href + currentHref;
-  //   console.log(updatedHref)
-  //   link.setAttribute('href', updatedHref);
-  // });
-
   // Event listener untuk menangani navigasi
   const navBtns = document.querySelectorAll('.navBtn')
   navBtns.forEach(function(navBtn) {
@@ -217,7 +233,8 @@ function initPage() {
       // Render halaman yang sesuai
       renderPage('pages/' + pageName + '.html', { 
         title: pageName,
-        portofolioKegiatan
+        portofolioKegiatan,
+        jadwalSkim
       });
     });
   })

@@ -11,12 +11,12 @@
     <div class="col-12">
       <div class="card">
         <div class="card-body">
-          <div class="d-flex justify-content-between">
+          <div class="d-flex justify-content-between align-items-start">
             <div>
               <h4>ITS Expo 2023</h4>
               <p class="fw-semibold">Diajukan tanggal: 20 Mei 2023</p>
             </div>
-            <button class="btn btn-outline-primary px-4 py-1 fw-bold">
+            <button class="btn btn-outline-primary px-4 py-1 fw-bold border border-2 border-primary">
               <i class="bi bi-pencil-square"></i>
               Edit
             </button>
@@ -42,7 +42,7 @@
           </div>
           <div class="row mb-3">
             <div class="col-4 text-secondary">Deskripsi Kegiatan</div>
-            <div class="col-8 text-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut beatae dolor sapiente ad autem quod quidem cum quisquam placeat qui.</div>
+            <div class="col-8 text-black">ITS Expo 2023 merupakan salah satu acara expo terbesar yang pernah diadakan. Event ini diselenggarakan sebanyak 1 kali dalam setahun dan berjalan selama 2 hari berturut-turut. Terdapat banyak jenis bazar pada event ini yang menyediakan aneka makanan, minuman, ataupun suvenir yang cantik dan unik</div>
           </div>
           <div class="row mb-3">
             <div class="col-4 text-secondary">Nama Tim</div>
@@ -127,7 +127,37 @@
     <div class="col-12">
       <div class="card">
         <div class="card-body">
-          <h5 class="mb-3">Logbook</h5>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div>
+              <h5>Logbook</h5>
+              <span>Catatan selama kegiatan wirausaha dilakukan</span>
+            </div>
+            <a href="javascript:void(0)" class="btn btn-primary rounded fw-semibold"><i class="bi bi-plus-lg"></i> Tambah Logbook</a>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <div class="shadow rounded-4 p-4 d-flex justify-content-between align-items-start position-relative border">
+                <span class="position-absolute top-0 end-0 mt-3 me-3"><i class="bi bi-three-dots-vertical"></i></span>
+                <img src="assets/item.png" alt="Logbook" width="50" height="50" class="me-3">
+                <div class="d-flex flex-column flex-grow-1">
+                  <h6 class="mb-1">Logbook 1</h6>
+                  <small class="mb-2">Tanggal: 20 Mei 2023</small>
+                  <button class="btn btn-outline-primary py-0 fw-bold border border-2 border-primary">Detail</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="shadow rounded-4 p-4 d-flex justify-content-between align-items-start position-relative border">
+                <span class="position-absolute top-0 end-0 mt-3 me-3"><i class="bi bi-three-dots-vertical"></i></span>
+                <img src="assets/item.png" alt="Logbook" width="50" height="50" class="me-3">
+                <div class="d-flex flex-column flex-grow-1">
+                  <h6 class="mb-1">Logbook 2</h6>
+                  <small class="mb-2">Tanggal: 24 Mei 2023</small>
+                  <button class="btn btn-outline-primary py-0 fw-bold border border-2 border-primary">Detail</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -135,8 +165,59 @@
     <div class="col-12">
       <div class="card">
         <div class="card-body">
-          <h5 class="mb-3">Jadwal dan Pemberkasan</h5>
-          <p>Catatan selama kegiatan wirausaha dilakukan</p>
+          <div class="d-flex justify-content-between align-items-center mb-5">
+            <div>
+              <h5>Jadwal dan Pemberkasan</h5>
+              <p class="text-info fw-semibold">Catatan selama kegiatan wirausaha dilakukan</p>
+            </div>
+            <a href="#informasi-skim" class="navBtn btn btn-outline-primary rounded border border-2 border-primary fw-semibold"><i class="bi bi-eye-fill"></i> Detail SKIM</a>
+          </div>
+          <div class="position-relative" style="margin-bottom: 6.5rem; margin-top: 6.5rem;" >
+            <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="height: 2px;">
+              <div class="progress-bar" style="width: 40%"></div>
+            </div>
+            <button type="button" class="position-absolute top-0 translate-middle btn btn-sm btn-outline-primary rounded-circle border border-2 border-primary bg-white" style="width: 1.2rem; height:1.2rem; left: 5%;">
+              <div class="position-relative">
+                <div class="position-absolute top-0 start-50 translate-middle-x fw-bold text-dark" style="margin-top: -2.3rem;">JADWAL</div>
+              </div>
+            </button>
+            <button type="button" class="position-absolute top-0 translate-middle btn btn-sm btn-outline-primary rounded-circle border border-2 border-primary bg-white" style="width: 1.2rem; height:1.2rem; left: 20%;">
+              <div class="position-relative">
+                <div class="position-absolute top-0 start-50 translate-middle-x fw-bold d-flex flex-column align-items-center" style="margin-top: 1.3rem; width: max-content;">
+                  <span class="text-dark">Pencairan Dana Termin 1</span>
+                  <small class="text-secondary">21 Mei 2023 - 30 Mei 2023</small>
+                  <small class="bg-success bg-opacity-10 text-success px-2 py-0">Selesai</small>
+                </div>
+              </div>
+            </button>
+            <button type="button" class="position-absolute top-0 translate-middle btn btn-sm btn-outline-primary rounded-circle border border-2 border-primary bg-white" style="width: 1.2rem; height:1.2rem; left: 40%;">
+              <div class="position-relative">
+                <div class="position-absolute top-0 start-50 translate-middle-x fw-bold d-flex flex-column align-items-center" style="margin-top: -5rem; width: max-content;">
+                  <span class="text-dark">Pengumuman Lolos Seleksi Internal</span>
+                  <small class="text-secondary">31 Mei 2023 - 05 Juni 2023</small>
+                  <small class="bg-info bg-opacity-10 text-info px-2 py-0">Sedang Berjalan</small>
+                </div>
+              </div>
+            </button>
+            <button type="button" class="position-absolute top-0 translate-middle btn btn-sm btn-outline-primary rounded-circle border border-2 border-primary bg-white" style="width: 1.2rem; height:1.2rem; left: 70%;">
+              <div class="position-relative">
+                <div class="position-absolute top-0 start-50 translate-middle-x fw-bold d-flex flex-column align-items-center" style="margin-top: 1.3rem; width: max-content;">
+                  <span class="text-dark">Seleksi Proposal dan Presentasi</span>
+                  <small class="text-secondary">07 Juni 2023 - 13 Juni 2023</small>
+                  <small class="bg-secondary bg-opacity-10 text-secondary px-2 py-0">Belum Dimulai</small>
+                </div>
+              </div>
+            </button>
+            <button type="button" class="position-absolute top-0 translate-middle btn btn-sm btn-outline-primary rounded-circle border border-2 border-primary bg-white" style="width: 1.2rem; height:1.2rem; left: 90%;">
+              <div class="position-relative">
+                <div class="position-absolute top-0 start-50 translate-middle-x fw-bold d-flex flex-column align-items-center" style="margin-top: -5rem; width: max-content;">
+                  <span class="text-dark">Pendaftaran</span>
+                  <small class="text-secondary">15 Juni 2023 - 20 Juni 2023</small>
+                  <small class="bg-secondary bg-opacity-10 text-secondary px-2 py-0">Belum Dimulai</small>
+                </div>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
     </div>
