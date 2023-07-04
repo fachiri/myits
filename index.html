@@ -29,6 +29,19 @@
       .sidebar-wrapper .menu .submenu .submenu-item a {
         padding: .7rem 1.3rem;
       }
+      .single-line-text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .multi-line-text {
+        display: -webkit-box;
+        display: -moz-box; /* Digunakan untuk dukungan di Firefox */
+        -webkit-line-clamp: 2;
+        -moz-box-orient: vertical; /* Digunakan untuk dukungan di Firefox */
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     </style>
   </head>
   <body>

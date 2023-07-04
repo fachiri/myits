@@ -138,7 +138,7 @@ const portofolioKegiatan = [
 
 const jadwalSkim = [
   {
-    judul: 'ITS Youth Technopreneur',
+    judul: 'ITS Youth Technopreneur 2023',
     mulai: '20 Feb 2023',
     selesai: '27 Mei 2023',
     tautan: '#informasi-skim'
@@ -156,13 +156,13 @@ const jadwalSkim = [
     tautan: null
   },
   {
-    judul: 'ITS Youth Technopreneur',
+    judul: 'ITS Youth Technopreneur 2023',
     mulai: '20 Feb 2023',
     selesai: '27 Mei 2023',
     tautan: null
   },
   {
-    judul: 'ITS Youth Technopreneur',
+    judul: 'ITS Youth Technopreneur 2023',
     mulai: '20 Feb 2023',
     selesai: '27 Mei 2023',
     tautan: null
@@ -206,8 +206,8 @@ fetch('layouts/header.html')
               let footerResult = footerTemplate(footerData);
               document.getElementById("footer").innerHTML = footerResult;
 
-              // renderPage('pages/beranda.html', { title: 'Beranda' });
-              renderPage('pages/tambah-ajuan.html', { title: 'Beranda' });
+              renderPage('pages/beranda.html', { title: 'Beranda' });
+              // renderPage('pages/tambah-ajuan.html', { title: 'Beranda', jadwalSkim, portofolioKegiatan });
           })
           .catch((error) => {
               console.error('Gagal memuat footer:', error);

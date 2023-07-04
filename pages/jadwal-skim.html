@@ -8,7 +8,7 @@
       <div class="card">
         <div class="card-body">
           <div class="row mb-4">
-            <div class="col-6">
+            <div class="col-sm-6 col-12">
               <div class="form-floating mb-3">
                 <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
                   <option selected>Semua Batas Waktu SKIM</option>
@@ -19,7 +19,7 @@
                 <label for="floatingSelect">Filter Batas Waktu SKIM</label>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-sm-6 col-12">
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Cari SKIM</label>
@@ -28,12 +28,12 @@
           </div>
           <div class="row">
             {{#each jadwalSkim}}
-              <div class="col-4 mb-3">
+              <div class="col-sm-4 col-12 mb-0 mb-sm-3">
                 <div class="card shadow rounded-3">
                   <div class="d-flex py-3 px-4">
                     <img src="assets/item.png" alt="Icon Item" width="50" height="50" class="me-3">
-                    <div class="d-flex flex-column align-items-start">
-                      <h6 class="mb-1">{{judul}}</h6>
+                    <div class="d-flex flex-column align-items-start overflow-hidden">
+                      <h6 class="mb-1 multi-line-text">{{judul}}</h6>
                       <small class="mb-1">Pendaftaran:</small>
                       <small class="mb-1">{{mulai}} - {{selesai}}</small>
                       <a href="{{#if tautan}}{{tautan}}{{^}}javascript:void(0) {{/if}}" class="{{#if tautan}} navBtn {{^}}  {{/if}} w-100 px-4 py-0 fw-bold btn btn-outline-primary rounded-2">Lihat Detail</a>

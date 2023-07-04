@@ -16,15 +16,17 @@
               <h4>ITS Expo 2023</h4>
               <p class="fw-semibold">Diajukan tanggal: 20 Mei 2023</p>
             </div>
-            <button class="btn btn-outline-primary px-4 py-1 fw-bold border border-2 border-primary">
+            <button class="btn btn-outline-primary px-2 px-sm-4 py-1 fw-bold border border-2 border-primary">
               <i class="bi bi-pencil-square"></i>
-              Edit
+              <span class="d-none d-sm-inline">
+                Edit
+              </span>
             </button>
           </div>
+
           <span class="bg-secondary bg-opacity-25 px-3 py-1 rounded-1">
             <small>Draft</small>
           </span>
-
           <h5 class="mb-3 mt-5">Informasi Kewirausahaan</h5>
           <p class="mb-3 fw-bold">Data SKIM</p>
           <div class="row mb-3">
@@ -86,12 +88,16 @@
       <div class="card">
         <div class="card-body">
           <h5 class="mb-3">Dosen Pembimbing</h5>
-          <div class="d-flex">
-            <div class="d-flex flex-column align-items-center border border-secondary rounded-4 p-3">
-              <span class="fs-1 fw-bold px-4 py-1 rounded-circle bg-secondary text-white mb-2">T</span>
-              <span class="fw-semibold">Tiara Mawidha Shelvi</span>
-              <small class="mb-2">199078455401</small>
-              <small class="text-primary fw-bold bg-info bg-opacity-25 px-2">Pembimbing Utama</small>
+          <div class="row">
+            <div class="col-sm-3 col-12">
+              <div class="d-flex flex-column align-items-center border border-secondary rounded-4 p-3">
+                <div class="fs-2 fw-bold rounded-circle bg-secondary text-white mb-2 position-relative" style="width: 3rem; height: 3rem;">
+                  <span class="position-absolute top-50 start-50 translate-middle">T</span>
+                </div>
+                <span class="fw-semibold">Tiara Mawidha Shelvi</span>
+                <small class="mb-2">199078455401</small>
+                <small class="text-primary fw-bold bg-info bg-opacity-25 px-2">Pembimbing Utama</small>
+              </div>
             </div>
           </div>
         </div>
@@ -102,22 +108,34 @@
       <div class="card">
         <div class="card-body">
           <h5 class="mb-3">Anggota Kewirausahaan</h5>
-          <div class="d-flex">
-            <div class="d-flex flex-column align-items-center border border-secondary rounded-4 p-3 me-3">
-              <span class="fs-1 fw-bold px-4 py-1 rounded-circle bg-secondary text-white mb-2">T</span>
-              <span class="fw-semibold">Tiara Andini</span>
-              <small class="mb-2">051119400012478</small>
-              <small class="text-primary fw-bold bg-info bg-opacity-25 px-2">Ketua</small>
+          <div class="row">
+            <div class="col-sm-3 col-12 mb-3">
+              <div class="d-flex flex-column align-items-center border border-secondary rounded-4 p-3">
+                <div class="fs-2 fw-bold rounded-circle bg-secondary text-white mb-2 position-relative" style="width: 3rem; height: 3rem;">
+                  <span class="position-absolute top-50 start-50 translate-middle">T</span>
+                </div>
+                <span class="fw-semibold">Tiara Andini</span>
+                <small class="mb-2">051119400012478</small>
+                <small class="text-primary fw-bold bg-info bg-opacity-25 px-2">Ketua</small>
+              </div>
             </div>
-            <div class="d-flex flex-column align-items-center border border-secondary rounded-4 p-3 me-3">
-              <span class="fs-1 fw-bold px-4 py-1 rounded-circle bg-secondary text-white mb-2">T</span>
-              <span class="fw-semibold">Fadia Nuraini Indah</span>
-              <small class="mb-2">05111840000123</small>
-              <small class="text-primary fw-bold bg-info bg-opacity-25 px-2">Anggota</small>
+            <div class="col-sm-3 col-12 mb-3">
+              <div class="d-flex flex-column align-items-center border border-secondary rounded-4 p-3">
+                <div class="fs-2 fw-bold rounded-circle bg-secondary text-white mb-2 position-relative" style="width: 3rem; height: 3rem;">
+                  <span class="position-absolute top-50 start-50 translate-middle">T</span>
+                </div>
+                <span class="fw-semibold">Fadia Nuraini Indah</span>
+                <small class="mb-2">05111840000123</small>
+                <small class="text-primary fw-bold bg-info bg-opacity-25 px-2">Anggota</small>
+              </div>
             </div>
-            <div class="d-flex flex-column justify-content-center align-items-center border border-primary rounded-4 p-3 me-3">
-              <span class="fs-3 fw-bold px-2 rounded-circle bg-primary text-white mb-2"><i class="bi bi-plus"></i></span>
-              <span class="fw-semibold text-primary">Tambah Anggota</span>
+            <div class="col-sm-3 col-12 mb-3">
+              <div class="d-flex flex-column justify-content-center align-items-center border border-primary rounded-4 p-3 h-100">
+                <div class="fs-2 fw-bold rounded-circle bg-primary text-white mb-2 position-relative" style="width: 3rem; height: 3rem;">
+                  <span class="position-absolute top-50 start-50 translate-middle"><i class="bi bi-plus fw-bold"></i></span>
+                </div>
+                <span class="fw-semibold text-primary">Tambah Anggota</span>
+              </div>
             </div>
           </div>
         </div>
@@ -127,15 +145,15 @@
     <div class="col-12">
       <div class="card">
         <div class="card-body">
-          <div class="d-flex justify-content-between align-items-center mb-3">
+          <div class="d-flex justify-content-between align-items-start mb-3">
             <div>
               <h5>Logbook</h5>
               <span>Catatan selama kegiatan wirausaha dilakukan</span>
             </div>
-            <a href="javascript:void(0)" class="btn btn-primary rounded fw-semibold"><i class="bi bi-plus-lg"></i> Tambah Logbook</a>
+            <a href="javascript:void(0)" class="btn btn-primary rounded fw-semibold"><i class="bi bi-plus-lg"></i> <span class="d-none d-sm-inline">Tambah Logbook</span></a>
           </div>
           <div class="row">
-            <div class="col-4">
+            <div class="col-sm-4 col-12 mb-3">
               <div class="shadow rounded-4 p-4 d-flex justify-content-between align-items-start position-relative border">
                 <span class="position-absolute top-0 end-0 mt-3 me-3"><i class="bi bi-three-dots-vertical"></i></span>
                 <img src="assets/item.png" alt="Logbook" width="50" height="50" class="me-3">
@@ -146,7 +164,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-sm-4 col-12 mb-3">
               <div class="shadow rounded-4 p-4 d-flex justify-content-between align-items-start position-relative border">
                 <span class="position-absolute top-0 end-0 mt-3 me-3"><i class="bi bi-three-dots-vertical"></i></span>
                 <img src="assets/item.png" alt="Logbook" width="50" height="50" class="me-3">
@@ -165,14 +183,14 @@
     <div class="col-12">
       <div class="card">
         <div class="card-body">
-          <div class="d-flex justify-content-between align-items-center mb-5">
+          <div class="d-flex justify-content-between align-items-start mb-5">
             <div>
               <h5>Jadwal dan Pemberkasan</h5>
               <p class="text-info fw-semibold">Catatan selama kegiatan wirausaha dilakukan</p>
             </div>
-            <a href="#informasi-skim" class="navBtn btn btn-outline-primary rounded border border-2 border-primary fw-semibold"><i class="bi bi-eye-fill"></i> Detail SKIM</a>
+            <a href="#informasi-skim" class="navBtn btn btn-outline-primary rounded border border-2 border-primary fw-semibold"><i class="bi bi-eye-fill"></i> <span class="d-none d-sm-inline">Detail SKIM</span></a>
           </div>
-          <div class="position-relative" style="margin-bottom: 6.5rem; margin-top: 6.5rem;" >
+          <div class="position-relative d-none d-sm-block" style="margin-bottom: 6.5rem; margin-top: 6.5rem;" >
             <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="height: 2px;">
               <div class="progress-bar" style="width: 40%"></div>
             </div>
