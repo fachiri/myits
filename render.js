@@ -197,7 +197,7 @@ function initPage() {
   const linkStyles = document.querySelectorAll("link[custom='true']");
   linkStyles.forEach(link => {
     const currentHref = link.getAttribute('href');
-    const updatedHref = window.location.origin + currentHref;
+    const updatedHref = window.location.href + currentHref;
     console.log(updatedHref)
     link.setAttribute('href', updatedHref);
   });
