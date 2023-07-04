@@ -1,4 +1,140 @@
-// Import library Handlebars jika belum melakukannya
+const portofolioKegiatan = [
+  {
+    judul: 'IMUN Online Conference',
+    jenis: 'Seminar',
+    lokasi: 'Online',
+    tahun: '2023',
+    warna: 'secondary',
+    status: 'Belum Diajukan',
+    tautan: null
+  },
+  {
+    judul: 'Intrepreneurship Seminar',
+    jenis: 'Seminar',
+    lokasi: 'Online',
+    tahun: '2023',
+    warna: 'warning',
+    status: 'Revisi',
+    tautan: '#detail-portofolio-kegiatan-revisi'
+  },
+  {
+    judul: 'Schematics ITS 2023',
+    jenis: 'Kepanitiaan',
+    lokasi: 'Kota Surabaya',
+    tahun: '2023',
+    warna: 'info',
+    status: 'Menunggu Verifikasi',
+    tautan: null
+  },
+  {
+    judul: 'Hammer Talk Volume 3',
+    jenis: 'Seminar',
+    lokasi: 'Online',
+    tahun: '2023',
+    warna: 'info',
+    status: 'Menunggu Verifikasi',
+    tautan: null
+  },
+  {
+    judul: 'Webinar Gundala 1.0',
+    jenis: 'Seminar',
+    lokasi: 'Online',
+    tahun: '2023',
+    warna: 'info',
+    status: 'Menunggu Verifikasi',
+    tautan: null
+  },
+  {
+    judul: 'LeadTalk and JobFair 2022',
+    jenis: 'Seminar',
+    lokasi: 'Online',
+    tahun: '2022',
+    warna: 'success',
+    status: 'Disetujui',
+    tautan: null
+  },
+  {
+    judul: 'SONITS 2022',
+    jenis: 'Seminar',
+    lokasi: 'Kota Surabaya',
+    tahun: '2022',
+    warna: 'success',
+    status: 'Disetujui',
+    tautan: null
+  },
+  {
+    judul: 'Kompetisi UI Design',
+    jenis: 'Kegiatan Lainnya',
+    lokasi: 'Online',
+    tahun: '2022',
+    warna: 'danger',
+    status: 'Ditolak',
+    tautan: '#detail-portofolio-kegiatan-ditolak'
+  },
+  {
+    judul: 'YLO Festival 2022',
+    jenis: 'Kepanitiaan',
+    lokasi: 'Kota Pekanbaru',
+    tahun: '2022',
+    warna: 'danger',
+    status: 'Ditolak',
+    tautan: null
+  },
+  {
+    judul: 'Webinar Nasional',
+    jenis: 'Seminar',
+    lokasi: 'Online',
+    tahun: '2021',
+    warna: 'success',
+    status: 'Disetujui',
+    tautan: null
+  },
+  {
+    judul: 'Seminar NST 2021',
+    jenis: 'Seminar',
+    lokasi: 'Kota Surabaya',
+    tahun: '2021',
+    warna: 'success',
+    status: 'Disetujui',
+    tautan: null
+  },
+  {
+    judul: 'Schematics REEVA 2021',
+    jenis: 'Kepanitiaan',
+    lokasi: 'Kota Surabaya',
+    tahun: '2021',
+    warna: 'success',
+    status: 'Disetujui',
+    tautan: null
+  },
+  {
+    judul: 'Webinar GM MUN 8',
+    jenis: 'Seminar',
+    lokasi: 'Online',
+    tahun: '2020',
+    warna: 'success',
+    status: 'Disetujui',
+    tautan: null
+  },
+  {
+    judul: 'Workshop Digital Marketing',
+    jenis: 'Seminar',
+    lokasi: 'Online',
+    tahun: '2020',
+    warna: 'success',
+    status: 'Disetujui',
+    tautan: null
+  },
+  {
+    judul: 'Schematics ITS 2020',
+    jenis: 'Kepanitiaan',
+    lokasi: 'Kota Surabaya',
+    tahun: '2020',
+    warna: 'success',
+    status: 'Disetujui',
+    tautan: null
+  },
+]
 
 // Fungsi untuk memuat konten halaman dari file dan menggabungkannya dengan template
 function renderPage(pagePath, data) {
@@ -12,6 +148,7 @@ function renderPage(pagePath, data) {
           // Tempelkan hasil rendering halaman ke dalam elemen dengan ID "content"
           document.getElementById("content").innerHTML = result;
           // Panggil fungsi initPage() untuk menginisialisasi JavaScript di halaman baru
+
           initPage();
       })
       .catch((error) => {
@@ -20,11 +157,11 @@ function renderPage(pagePath, data) {
 }
 
 // Data yang akan diisi ke dalam template header dan footer
-var headerData = {
+let headerData = {
   title: "Judul Situs"
 };
 
-var footerData = {
+let footerData = {
   year: new Date().getFullYear()
 };
 
@@ -32,20 +169,21 @@ var footerData = {
 fetch('layouts/header.html')
   .then((response) => response.text())
   .then((headerContent) => {
-      var headerTemplate = Handlebars.compile(headerContent);
-      var headerResult = headerTemplate(headerData);
+      let headerTemplate = Handlebars.compile(headerContent);
+      let headerResult = headerTemplate(headerData);
       document.getElementById("header").innerHTML = headerResult;
 
       // Render footer setelah header selesai
       fetch('layouts/footer.html')
           .then((response) => response.text())
           .then((footerContent) => {
-              var footerTemplate = Handlebars.compile(footerContent);
-              var footerResult = footerTemplate(footerData);
+              let footerTemplate = Handlebars.compile(footerContent);
+              let footerResult = footerTemplate(footerData);
               document.getElementById("footer").innerHTML = footerResult;
 
               // Setelah header dan footer selesai, render halaman pertama di folder 'pages'
               renderPage('pages/beranda.html', { title: 'Beranda' });
+              // renderPage('pages/portofolio-kompetisi.html', { title: 'Portofolio', portofolioKegiatan });
           })
           .catch((error) => {
               console.error('Gagal memuat footer:', error);
@@ -56,6 +194,13 @@ fetch('layouts/header.html')
   });
 
 function initPage() {
+  const linkStyles = document.querySelectorAll("link[custom='true']");
+  linkStyles.forEach(link => {
+    const currentHref = link.getAttribute('href');
+    const updatedHref = window.location.origin + currentHref;
+    link.setAttribute('href', updatedHref);
+  });
+
   // Event listener untuk menangani navigasi
   const navBtns = document.querySelectorAll('.navBtn')
   navBtns.forEach(function(navBtn) {
@@ -67,9 +212,12 @@ function initPage() {
       event.preventDefault(); // Mencegah perilaku default
       // Ambil nama halaman dari atribut href
       const pageName = target.getAttribute('href').slice(1);
-      
+
       // Render halaman yang sesuai
-      renderPage('pages/' + pageName + '.html', { title: pageName });
+      renderPage('pages/' + pageName + '.html', { 
+        title: pageName,
+        portofolioKegiatan
+      });
     });
   })
 
@@ -121,6 +269,28 @@ function initPage() {
       });
     });
   });
+
+  // Fungsi untuk menampilkan atau menyembunyikan item berdasarkan status
+  function filterItems(status) {
+    const items = document.getElementsByClassName("item");
+    for (let i = 0; i < items.length; i++) {
+        if (status === "Semua" || items[i].getAttribute("data-status") === status) {
+            items[i].classList.remove("d-none");
+        } else {
+            items[i].classList.add("d-none");
+        }
+    }
+  }
+
+  // Event listener untuk tombol filter
+  const filterButtons = document.getElementsByClassName("filter-btn");
+  for (let i = 0; i < filterButtons.length; i++) {
+      filterButtons[i].addEventListener("click", function() {
+          const statusFilter = this.getAttribute("data-status");
+          filterItems(statusFilter);
+      });
+  }
+
 }
 
 
