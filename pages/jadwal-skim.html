@@ -28,12 +28,13 @@
           </div>
           <div class="row">
             {{#each jadwalSkim}}
-              <div class="col-sm-4 col-12 mb-0 mb-sm-3">
-                <div class="card shadow rounded-3">
-                  <div class="d-flex py-3 px-4">
+              <div class="col-sm-4 col-12 mb-3">
+                <div class="card shadow rounded-3 border h-100">
+                  <div class="d-flex py-3 px-4 h-100">
                     <img src="assets/item.png" alt="Icon Item" width="50" height="50" class="me-3">
-                    <div class="d-flex flex-column align-items-start overflow-hidden">
+                    <div class="d-flex flex-column justify-content-between h-100 align-items-start overflow-hidden">
                       <h6 class="mb-1 multi-line-text">{{judul}}</h6>
+                      
                       <small class="mb-1">Pendaftaran:</small>
                       <small class="mb-1">{{mulai}} - {{selesai}}</small>
                       <a href="{{#if tautan}}{{tautan}}{{^}}javascript:void(0) {{/if}}" class="{{#if tautan}} navBtn {{^}}  {{/if}} w-100 px-4 py-0 fw-bold btn btn-outline-primary rounded-2">Lihat Detail</a>

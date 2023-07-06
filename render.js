@@ -207,7 +207,7 @@ fetch('layouts/header.html')
               document.getElementById("footer").innerHTML = footerResult;
 
               renderPage('pages/beranda.html', { title: 'Beranda' });
-              // renderPage('pages/tambah-ajuan.html', { title: 'Beranda', jadwalSkim, portofolioKegiatan });
+              // renderPage('pages/portofolio-kegiatan.html', { title: 'Beranda', jadwalSkim, portofolioKegiatan });
           })
           .catch((error) => {
               console.error('Gagal memuat footer:', error);
@@ -238,6 +238,28 @@ function initPage() {
       });
     });
   })
+
+  const simpanAjuan = document.getElementById('simpanAjuan')
+  if (simpanAjuan) {
+    simpanAjuan.addEventListener('click', (e) => {
+      e.preventDefault()
+      
+      const formTambahAjuan = document.getElementById('formTambahAjuan')
+      const alertContainer = document.getElementById('alertContainer')
+      alertContainer.classList.toggle('d-none')
+  
+      formTambahAjuan.reset()
+    
+      const scrollToTop = () => {
+        if (window.scrollY !== 0) {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          requestAnimationFrame(scrollToTop);
+        }
+      };
+  
+      scrollToTop();
+    })
+  }
 
   // Fungsi untuk memuat JavaScript eksternal
   function loadScript(src, callback) {

@@ -6,156 +6,187 @@
     <h4>Tambah Ajuan Kompetisi</h4>
   </div>
 </div>
+<div id="alertContainer" class="d-none">
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <i class="bi bi-exclamation-diamond-fill"></i>
+    <span class="fw-semibold">
+      Berhasil menyimpan kompetisi!!
+    </span>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+</div>
 <div class="page-content">
   <section class="row">
     <div class="col-12">
       <div class="card">
         <div class="card-body">
-          <div class="mb-5">
-            <h5 class="mb-3">Informasi Kompetisi</h5>
-            <div class="row">
-              <div class="col-sm-6 col-12">
-                <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-                  <label for="floatingInput">Nama Kompetisi</label>
+          <form id="formTambahAjuan">
+            <div class="mb-5">
+              <h5 class="mb-3">Informasi Kompetisi</h5>
+              <div class="row">
+                <div class="col-sm-6 col-12">
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Nama Kompetisi</label>
+                  </div>
                 </div>
-              </div>
-              <div class="col-sm-6 col-12">
-                <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-                  <label for="floatingInput">Penyelenggara Kompetisi</label>
+                <div class="col-sm-6 col-12">
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Penyelenggara Kompetisi</label>
+                  </div>
                 </div>
-              </div>
-              <div class="col-sm-6 col-12">
-                <div class="form-floating mb-3">
-                  <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                    <option selected>Pilih atau ketik jenis kompetisi</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                  <label for="floatingSelect">Jenis Kompetisi</label>
+                <div class="col-sm-6 col-12">
+                  <div class="form-floating mb-3">
+                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                      <option selected>Pilih atau ketik jenis kompetisi</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <label for="floatingSelect">Jenis Kompetisi</label>
+                  </div>
                 </div>
-              </div>
-              <div class="col-sm-6 col-12">
-                <div class="form-floating mb-3">
-                  <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                    <option selected>Pilih salah satu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                  <label for="floatingSelect">Skala Kompetisi</label>
+                <div class="col-sm-6 col-12">
+                  <div class="form-floating mb-3">
+                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <label for="floatingSelect">Skala Kompetisi</label>
+                  </div>
                 </div>
-              </div>
-              <div class="col-12">
-                <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="floatingInput" value="https://">
-                  <label for="floatingInput">Alamat Web Kompetisi</label>
+                <div class="col-12">
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" value="https://">
+                    <label for="floatingInput">Alamat Web Kompetisi</label>
+                  </div>
                 </div>
-              </div>
-              <div class="col-sm-6 col-12">
-                <div class="form-floating mb-3">
-                  <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com">
-                  <label for="floatingInput">Tanggal Mulai</label>
+                <div class="col-sm-6 col-12">
+                  <div class="form-floating mb-3">
+                    <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Tanggal Mulai</label>
+                  </div>
                 </div>
-              </div>
-              <div class="col-sm-6 col-12">
-                <div class="form-floating mb-3">
-                  <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com">
-                  <label for="floatingInput">Tanggal Selesai</label>
+                <div class="col-sm-6 col-12">
+                  <div class="form-floating mb-3">
+                    <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Tanggal Selesai</label>
+                  </div>
                 </div>
-              </div>
-              <div class="col-sm-6 col-12">
-                <div class="form-floating mb-3">
-                  <input type="number" class="form-control" id="jumlahPeserta">
-                  <label for="jumlahPeserta">Jumlah Peserta Kompetisi</label>
+                <div class="col-sm-6 col-12">
+                  <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="jumlahPeserta">
+                    <label for="jumlahPeserta">Jumlah Peserta Kompetisi</label>
+                  </div>
                 </div>
-              </div>
-              <div class="col-sm-6 col-12">
-                <div class="form-floating">
-                  <input type="number" class="form-control" id="jumlahNegara">
-                  <label for="jumlahNegara">Jumlah Negara/Provinsi yang Ikut Serta</label>
+                <div class="col-sm-6 col-12">
+                  <div class="form-floating">
+                    <input type="number" class="form-control" id="jumlahNegara">
+                    <label for="jumlahNegara">Jumlah Negara/Provinsi yang Ikut Serta</label>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+  
+            <div class="mb-5">
+              <h5 class="mb-3">Akademik</h5>
+              <h6 class="mb-2">Apakah diajukan untuk konversi akademik?</h6>
+              <div class="row mb-3">
+                <div class="col-6">
+                  <input type="radio" class="btn-check" name="question-1" id="question-1-yes" autocomplete="off">
+                  <label class="w-100 btn btn-outline-primary" for="question-1-yes">Ya</label>
+                </div>
+                <div class="col-6">
+                  <input type="radio" class="btn-check" name="question-1" id="question-1-no" autocomplete="off">
+                  <label class="w-100 btn btn-outline-primary" for="question-1-no">Tidak</label>
+                </div>
+              </div>
+              <h6 class="mb-2">Apakah berhubungan dengan bidang ilmu?</h6>
+              <div class="row mb-3">
+                <div class="col-6">
+                  <input type="radio" class="btn-check" name="question-2" id="question-2-yes" autocomplete="off">
+                  <label class="w-100 btn btn-outline-primary" for="question-2-yes">Ya</label>
+                </div>
+                <div class="col-6">
+                  <input type="radio" class="btn-check" name="question-2" id="question-2-no" autocomplete="off">
+                  <label class="w-100 btn btn-outline-primary" for="question-2-no">Tidak</label>
+                </div>
+              </div>
+              <h6 class="mb-2">Apakah termasuk MBKM Flagship?</h6>
+              <div class="row mb-3">
+                <div class="col-6">
+                  <input type="radio" class="btn-check" name="question-3" id="question-3-yes" autocomplete="off">
+                  <label class="w-100 btn btn-outline-primary" for="question-3-yes">Ya</label>
+                </div>
+                <div class="col-6">
+                  <input type="radio" class="btn-check" name="question-3" id="question-3-no" autocomplete="off">
+                  <label class="w-100 btn btn-outline-primary" for="question-3-no">Tidak</label>
+                </div>
+              </div>
+            </div>
+  
+            <div class="mb-4">
+              <h5 class="mb-3">Informasi Partisipasi</h5>
+              <div class="row">
+                <div class="col-sm-6 col-12">
+                  <div class="form-floating mb-3">
+                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <label for="floatingSelect">Capaian Kompetisi</label>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-12">
+                  <div class="form-floating mb-3">
+                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                      <option selected>Pilih salah satu</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <label for="floatingSelect">Luaran Kompetisi</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-floating mb-3">
+                    <textarea class="form-control" style="height: 100px;" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea">Deskripsi Luaran</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="float-end">
+              <button type="button" class="btn">Batal</button>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#konfirmasiAjuan">Simpan</button>
+            </div>
 
-          <div class="mb-5">
-            <h5 class="mb-3">Akademik</h5>
-            <h6 class="mb-2">Apakah diajukan untuk konversi akademik?</h6>
-            <div class="row mb-3">
-              <div class="col-6">
-                <input type="radio" class="btn-check" name="question-1" id="question-1-yes" autocomplete="off">
-                <label class="w-100 btn btn-outline-primary" for="question-1-yes">Ya</label>
-              </div>
-              <div class="col-6">
-                <input type="radio" class="btn-check" name="question-1" id="question-1-no" autocomplete="off">
-                <label class="w-100 btn btn-outline-primary" for="question-1-no">Tidak</label>
-              </div>
-            </div>
-            <h6 class="mb-2">Apakah berhubungan dengan bidang ilmu?</h6>
-            <div class="row mb-3">
-              <div class="col-6">
-                <input type="radio" class="btn-check" name="question-2" id="question-2-yes" autocomplete="off">
-                <label class="w-100 btn btn-outline-primary" for="question-2-yes">Ya</label>
-              </div>
-              <div class="col-6">
-                <input type="radio" class="btn-check" name="question-2" id="question-2-no" autocomplete="off">
-                <label class="w-100 btn btn-outline-primary" for="question-2-no">Tidak</label>
-              </div>
-            </div>
-            <h6 class="mb-2">Apakah termasuk MBKM Flagship?</h6>
-            <div class="row mb-3">
-              <div class="col-6">
-                <input type="radio" class="btn-check" name="question-3" id="question-3-yes" autocomplete="off">
-                <label class="w-100 btn btn-outline-primary" for="question-3-yes">Ya</label>
-              </div>
-              <div class="col-6">
-                <input type="radio" class="btn-check" name="question-3" id="question-3-no" autocomplete="off">
-                <label class="w-100 btn btn-outline-primary" for="question-3-no">Tidak</label>
-              </div>
-            </div>
-          </div>
-
-          <div class="mb-4">
-            <h5 class="mb-3">Informasi Partisipasi</h5>
-            <div class="row">
-              <div class="col-sm-6 col-12">
-                <div class="form-floating mb-3">
-                  <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                    <option selected>Pilih salah satu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                  <label for="floatingSelect">Capaian Kompetisi</label>
-                </div>
-              </div>
-              <div class="col-sm-6 col-12">
-                <div class="form-floating mb-3">
-                  <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                    <option selected>Pilih salah satu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                  <label for="floatingSelect">Luaran Kompetisi</label>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-floating mb-3">
-                  <textarea class="form-control" style="height: 100px;" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                  <label for="floatingTextarea">Deskripsi Luaran</label>
+            <!-- Modal -->
+            <div class="modal fade" id="konfirmasiAjuan" tabindex="-1" aria-labelledby="konfirmasiAjuanLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="konfirmasiAjuanLabel">Konfirmasi Ajuan</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    Apakah anda sudah yakin ingin menyimpan kompetisi?
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-primary" id="simpanAjuan" data-bs-dismiss="modal">Ya, Simpan</button>
+                    <!-- <a href="index.html" class="btn btn-primary" id="simpanAjuan">Ya, Simpan</a> -->
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="float-end">
-            <button class="btn">Batal</button>
-            <button class="btn btn-primary">Simpan</button>
-          </div>
+          </form>
         </div>
       </div>
     </div>
