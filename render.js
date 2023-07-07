@@ -206,8 +206,8 @@ fetch('layouts/header.html')
               let footerResult = footerTemplate(footerData);
               document.getElementById("footer").innerHTML = footerResult;
 
-              renderPage('pages/beranda.html', { title: 'Beranda' });
-              // renderPage('pages/portofolio-kegiatan.html', { title: 'Beranda', jadwalSkim, portofolioKegiatan });
+              // renderPage('pages/beranda.html', { title: 'Beranda' });
+              renderPage('pages/detail-kompetisi.html', { title: 'Beranda', jadwalSkim, portofolioKegiatan });
           })
           .catch((error) => {
               console.error('Gagal memuat footer:', error);
@@ -218,6 +218,7 @@ fetch('layouts/header.html')
   });
 
 function initPage() {
+  window.scrollTo({ top: 0, behavior: 'instant' });
   // Event listener untuk menangani navigasi
   const navBtns = document.querySelectorAll('.navBtn')
   navBtns.forEach(function(navBtn) {
@@ -238,28 +239,6 @@ function initPage() {
       });
     });
   })
-
-  const simpanAjuan = document.getElementById('simpanAjuan')
-  if (simpanAjuan) {
-    simpanAjuan.addEventListener('click', (e) => {
-      e.preventDefault()
-      
-      const formTambahAjuan = document.getElementById('formTambahAjuan')
-      const alertContainer = document.getElementById('alertContainer')
-      alertContainer.classList.toggle('d-none')
-  
-      formTambahAjuan.reset()
-    
-      const scrollToTop = () => {
-        if (window.scrollY !== 0) {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-          requestAnimationFrame(scrollToTop);
-        }
-      };
-  
-      scrollToTop();
-    })
-  }
 
   // Fungsi untuk memuat JavaScript eksternal
   function loadScript(src, callback) {
