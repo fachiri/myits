@@ -206,8 +206,8 @@ fetch('layouts/header.html')
               let footerResult = footerTemplate(footerData);
               document.getElementById("footer").innerHTML = footerResult;
 
-              // renderPage('pages/beranda.html', { title: 'Beranda' });
-              renderPage('pages/detail-kompetisi.html', { title: 'Beranda', jadwalSkim, portofolioKegiatan });
+              renderPage('pages/beranda.html', { title: 'Beranda' });
+              // renderPage('pages/detail-kompetisi.html', { title: 'Beranda', jadwalSkim, portofolioKegiatan });
           })
           .catch((error) => {
               console.error('Gagal memuat footer:', error);

@@ -113,7 +113,7 @@
         <div class="card-body">
           <h5 class="mb-3">Dosen Pembimbing</h5>
           <div class="row">
-            <div class="col-sm-3 col-12">
+            <div class="col-sm-3 col-12 mb-3 mb-sm-0">
               <div class="d-flex flex-column align-items-center border border-secondary rounded-4 p-3">
                 <div class="fs-2 fw-bold rounded-circle bg-secondary text-white mb-2 position-relative" style="width: 3rem; height: 3rem;">
                   <span class="position-absolute top-50 start-50 translate-middle">T</span>
@@ -123,6 +123,14 @@
                 <small class="text-primary fw-bold bg-info bg-opacity-25 px-2">Pembimbing Utama</small>
               </div>
             </div>
+            <div class="col-sm-3 col-12 mb-3 mb-sm-0">
+              <a class="d-flex flex-column justify-content-center align-items-center border border-primary rounded-4 p-3 h-100 cursor-pointer" data-bs-toggle="modal" data-bs-target="#tambahDospemModal">
+                <div class="fs-2 fw-bold rounded-circle bg-primary text-white mb-2 position-relative" style="width: 3rem; height: 3rem;">
+                  <span class="position-absolute top-50 start-50 translate-middle"><i class="bi bi-plus fw-bold"></i></span>
+                </div>
+                <span class="fw-semibold text-primary text-center">Tambah Dosen Pembimbing</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -131,9 +139,13 @@
     <div class="col-12">
       <div class="card">
         <div class="card-body">
-          <h5 class="mb-3">Anggota Kompetisi</h5>
+          <h5 class="">Anggota Kompetisi</h5>
+          <div class="mb-3">
+            <span class="text-primary fw-bold bg-info bg-opacity-25 px-3 py-1 rounded-3">Beregu</span>
+            <span class="text-primary fw-bold bg-info bg-opacity-25 px-3 py-1 rounded-3">Jumlah Anggota: 2</span>
+          </div>
           <div class="row">
-            <div class="col-sm-3 col-12 mb-3">
+            <div class="col-sm-3 col-12 mb-3 mb-sm-0">
               <div class="d-flex flex-column align-items-center border border-secondary rounded-4 p-3">
                 <div class="fs-2 fw-bold rounded-circle bg-secondary text-white mb-2 position-relative" style="width: 3rem; height: 3rem;">
                   <span class="position-absolute top-50 start-50 translate-middle">T</span>
@@ -143,7 +155,7 @@
                 <small class="text-primary fw-bold bg-info bg-opacity-25 px-2">Ketua</small>
               </div>
             </div>
-            <div class="col-sm-3 col-12 mb-3">
+            <div class="col-sm-3 col-12 mb-3 mb-sm-0">
               <div class="d-flex flex-column align-items-center border border-secondary rounded-4 p-3">
                 <div class="fs-2 fw-bold rounded-circle bg-secondary text-white mb-2 position-relative" style="width: 3rem; height: 3rem;">
                   <span class="position-absolute top-50 start-50 translate-middle">T</span>
@@ -153,13 +165,13 @@
                 <small class="text-primary fw-bold bg-info bg-opacity-25 px-2">Anggota</small>
               </div>
             </div>
-            <div class="col-sm-3 col-12 mb-3">
-              <div class="d-flex flex-column justify-content-center align-items-center border border-primary rounded-4 p-3 h-100">
+            <div class="col-sm-3 col-12 mb-3 mb-sm-0">
+              <a class="d-flex flex-column justify-content-center align-items-center border border-primary rounded-4 p-3 h-100 cursor-pointer" data-bs-toggle="modal" data-bs-target="#tambahAnggotaModal">
                 <div class="fs-2 fw-bold rounded-circle bg-primary text-white mb-2 position-relative" style="width: 3rem; height: 3rem;">
                   <span class="position-absolute top-50 start-50 translate-middle"><i class="bi bi-plus fw-bold"></i></span>
                 </div>
                 <span class="fw-semibold text-primary">Tambah Anggota</span>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -174,10 +186,16 @@
           <div class="border border-light p-3 rounded-4 mb-3">
             <div class="d-flex justify-content-between align-items-start mb-3">
               <span class="fw-semibold">Foto Penyerahan Penghargaan</span>
-              <button class="btn btn-outline-primary py-0 fw-bold border border-2 border-primary rounded-3">
-                <i class="bi bi-paperclip"></i>
-                <span class="d-none d-sm-inline">Lampirkan Berkas</span>
-              </button>
+              <div class="dropdown">
+                <button class="dropdown-toggle btn btn-outline-primary py-0 fw-bold border border-2 border-primary rounded-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-paperclip"></i>
+                  <span class="d-none d-sm-inline">Lampirkan Berkas</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><button class="dropdown-item">Unggah Berkas</button></li>
+                  <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#berkasModal1">Pilih Berkas Saya</button></li>
+                </ul>
+              </div>
             </div>
             <div class="row">
               <div class="col-sm-4 col-12 mb-3">
@@ -211,10 +229,16 @@
           <div class="border border-light p-3 rounded-4 mb-3">
             <div class="d-flex justify-content-between align-items-start mb-3">
               <span class="fw-semibold">Laman Web Kompetisi</span>
-              <button class="btn btn-outline-primary py-0 fw-bold border border-2 border-primary rounded-3">
-                <i class="bi bi-paperclip"></i>
-                <span class="d-none d-sm-inline">Lampirkan Berkas</span>
-              </button>
+              <div class="dropdown">
+                <button class="dropdown-toggle btn btn-outline-primary py-0 fw-bold border border-2 border-primary rounded-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-paperclip"></i>
+                  <span class="d-none d-sm-inline">Lampirkan Berkas</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><button class="dropdown-item">Unggah Berkas</button></li>
+                  <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#berkasModal2">Pilih Berkas Saya</button></li>
+                </ul>
+              </div>
             </div>
             <div class="row">
               <div class="col-sm-4 col-12 mb-3">
@@ -235,10 +259,16 @@
           <div class="border border-light p-3 rounded-4 mb-3">
             <div class="d-flex justify-content-between align-items-start mb-3">
               <span class="fw-semibold">Sertifikat/Surat Pernyataan bukti penghargaan</span>
-              <button class="btn btn-outline-primary py-0 fw-bold border border-2 border-primary rounded-3">
-                <i class="bi bi-paperclip"></i>
-                <span class="d-none d-sm-inline">Lampirkan Berkas</span>
-              </button>
+              <div class="dropdown">
+                <button class="dropdown-toggle btn btn-outline-primary py-0 fw-bold border border-2 border-primary rounded-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-paperclip"></i>
+                  <span class="d-none d-sm-inline">Lampirkan Berkas</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><button class="dropdown-item">Unggah Berkas</button></li>
+                  <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#berkasModal3">Pilih Berkas Saya</button></li>
+                </ul>
+              </div>
             </div>
             <div class="row">
               <div class="col-sm-4 col-12 mb-3">
@@ -285,10 +315,16 @@
           <div class="border border-light p-3 rounded-4 mb-3">
             <div class="d-flex justify-content-between align-items-start mb-3">
               <span class="fw-semibold">Surat Tugas dari ITS</span>
-              <button class="btn btn-outline-primary py-0 fw-bold border border-2 border-primary rounded-3">
-                <i class="bi bi-paperclip"></i>
-                <span class="d-none d-sm-inline">Lampirkan Berkas</span>
-              </button>
+              <div class="dropdown">
+                <button class="dropdown-toggle btn btn-outline-primary py-0 fw-bold border border-2 border-primary rounded-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-paperclip"></i>
+                  <span class="d-none d-sm-inline">Lampirkan Berkas</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><button class="dropdown-item">Unggah Berkas</button></li>
+                  <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#berkasModal4">Pilih Berkas Saya</button></li>
+                </ul>
+              </div>
             </div>
             <div class="row">
               <div class="col-sm-4 col-12 mb-3">
@@ -310,13 +346,13 @@
             <div class="d-flex justify-content-between align-items-start mb-3">
               <span class="fw-semibold">Surat Penerimaan/Invitasi dari panitia (opsional)</span>
               <div class="dropdown">
-                <button class="btn btn-outline-primary py-0 fw-bold border border-2 border-primary rounded-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="dropdown-toggle btn btn-outline-primary py-0 fw-bold border border-2 border-primary rounded-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <i class="bi bi-paperclip"></i>
                   <span class="d-none d-sm-inline">Lampirkan Berkas</span>
                 </button>
                 <ul class="dropdown-menu">
                   <li><button class="dropdown-item">Unggah Berkas</button></li>
-                  <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#berkasModal">Pilih Berkas Saya</button></li>
+                  <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#berkasModal1">Pilih Berkas Saya</button></li>
                 </ul>
               </div>
             </div>
@@ -358,6 +394,314 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
         <a href="#detail-kompetisi" class="navBtn btn btn-primary" data-bs-dismiss="modal">Ya, Simpan</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="tambahAnggotaModal" tabindex="-1" aria-labelledby="tambahAnggotaModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="tambahAnggotaModalLabel">Tambah Anggota</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-floating mb-3">
+          <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+            <option selected>Ketik Nama atau NRP anggota</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+          <label for="floatingSelect">Anggota</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Tambah</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="tambahDospemModal" tabindex="-1" aria-labelledby="tambahDospemModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="tambahDospemModalLabel">Tambah Dosen Pembimbing</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-floating mb-3">
+          <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+            <option selected>Ketik Nama atau NIP Dosen</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+          <label for="floatingSelect">Dosen Pembimbing</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Nomor Telpon</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Tambah</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="berkasModal1" tabindex="-1" aria-labelledby="berkasModal1Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="berkasModal1Label">Pilih dari Berkas Saya</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="cariBerkas">
+          <label for="cariBerkas">Cari Berkas</label>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 col-12 mb-3">
+            <div class="d-flex justify-content-between align-items-center border border-light py-2 px-3 rounded-4">
+              <input class="form-check-input me-3" type="checkbox">
+              <img src="assets/png.png" alt="Icon Item" width="auto" height="50">
+              <div class="d-flex flex-column flex-grow-1 overflow-hidden ms-3">
+                <span class="fw-semibold single-line-text">Foto Gemastik 1.png</span>
+                <small>2 mb</small>
+                <small>14 Agustus 2022 06:13</small>
+              </div>
+              <span>
+                <i class="bi bi-three-dots-vertical"></i>
+              </span>
+            </div>
+          </div>
+          <div class="col-sm-4 col-12 mb-3">
+            <div class="d-flex justify-content-between align-items-center border border-light py-2 px-3 rounded-4">
+              <input class="form-check-input me-3" type="checkbox">
+              <img src="assets/png.png" alt="Icon Item" width="auto" height="50">
+              <div class="d-flex flex-column flex-grow-1 overflow-hidden ms-3">
+                <span class="fw-semibold single-line-text">Foto Gemastik 2.png</span>
+                <small>2 mb</small>
+                <small>14 Agustus 2022 06:13</small>
+              </div>
+              <span>
+                <i class="bi bi-three-dots-vertical"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer d-flex justify-content-between">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Pilih Semua
+          </label>
+        </div>
+        <div>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-primary">Unggah</button>
+        </div>        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="berkasModal2" tabindex="-1" aria-labelledby="berkasModal2Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="berkasModal2Label">Pilih dari Berkas Saya</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="cariBerkas">
+          <label for="cariBerkas">Cari Berkas</label>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 col-12 mb-3">
+            <div class="d-flex justify-content-between align-items-center border border-light py-2 px-3 rounded-4">
+              <input class="form-check-input me-3" type="checkbox">
+              <img src="assets/jpg.png" alt="Icon Item" width="auto" height="50">
+              <div class="d-flex flex-column flex-grow-1 overflow-hidden ms-3">
+                <span class="fw-semibold single-line-text">SS Web Gemastik.jpg</span>
+                <small>2 mb</small>
+                <small>14 Agustus 2022 06:13</small>
+              </div>
+              <span>
+                <i class="bi bi-three-dots-vertical"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer d-flex justify-content-between">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Pilih Semua
+          </label>
+        </div>
+        <div>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-primary">Unggah</button>
+        </div>        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="berkasModal3" tabindex="-1" aria-labelledby="berkasModal3Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="berkasModal3Label">Pilih dari Berkas Saya</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="cariBerkas">
+          <label for="cariBerkas">Cari Berkas</label>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 col-12 mb-3">
+            <div class="d-flex justify-content-between align-items-center border border-light py-2 px-3 rounded-4">
+              <input class="form-check-input me-3" type="checkbox">
+              <img src="assets/pdf.png" alt="Icon Item" width="auto" height="50">
+              <div class="d-flex flex-column flex-grow-1 overflow-hidden ms-3">
+                <span class="fw-semibold single-line-text">Surat Gemastik 1.pdf</span>
+                <small>2 mb</small>
+                <small>14 Agustus 2022 06:13</small>
+              </div>
+              <span>
+                <i class="bi bi-three-dots-vertical"></i>
+              </span>
+            </div>
+          </div>
+          <div class="col-sm-4 col-12 mb-3">
+            <div class="d-flex justify-content-between align-items-center border border-light py-2 px-3 rounded-4">
+              <input class="form-check-input me-3" type="checkbox">
+              <img src="assets/pdf.png" alt="Icon Item" width="auto" height="50">
+              <div class="d-flex flex-column flex-grow-1 overflow-hidden ms-3">
+                <span class="fw-semibold single-line-text">Surat Gemastik XIV.pdf</span>
+                <small>2 mb</small>
+                <small>14 Agustus 2022 06:13</small>
+              </div>
+              <span>
+                <i class="bi bi-three-dots-vertical"></i>
+              </span>
+            </div>
+          </div>
+          <div class="col-sm-4 col-12 mb-3">
+            <div class="d-flex justify-content-between align-items-center border border-light py-2 px-3 rounded-4">
+              <input class="form-check-input" type="checkbox">
+              <input class="form-check-input me-3" type="checkbox">
+              <img src="assets/pdf.png" alt="Icon Item" width="auto" height="50">
+              <div class="d-flex flex-column flex-grow-1 overflow-hidden mx-3">
+                <span class="fw-semibold single-line-text">Sertifikat Juara 1 Gemastik XIV.pdf</span>
+                <small>2 mb</small>
+                <small>14 Agustus 2022 06:13</small>
+              </div>
+              <span>
+                <i class="bi bi-three-dots-vertical"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer d-flex justify-content-between">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Pilih Semua
+          </label>
+        </div>
+        <div>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-primary">Unggah</button>
+        </div>        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="berkasModal4" tabindex="-1" aria-labelledby="berkasModal4Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="berkasModal4Label">Pilih dari Berkas Saya</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="cariBerkas">
+          <label for="cariBerkas">Cari Berkas</label>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 col-12 mb-3">
+            <div class="d-flex justify-content-between align-items-center border border-light py-2 px-3 rounded-4">
+              <input class="form-check-input me-3" type="checkbox">
+              <img src="assets/jpg.png" alt="Icon Item" width="auto" height="50">
+              <div class="d-flex flex-column flex-grow-1 overflow-hidden ms-3">
+                <span class="fw-semibold single-line-text">SS Tugas dari ITS.jpg</span>
+                <small>2 mb</small>
+                <small>14 Agustus 2022 06:13</small>
+              </div>
+              <span>
+                <i class="bi bi-three-dots-vertical"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer d-flex justify-content-between">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Pilih Semua
+          </label>
+        </div>
+        <div>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-primary">Unggah</button>
+        </div>        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="berkasModal5" tabindex="-1" aria-labelledby="berkasModal5Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="berkasModal5Label">Pilih dari Berkas Saya</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="cariBerkas">
+          <label for="cariBerkas">Cari Berkas</label>
+        </div>
+      </div>
+      <div class="modal-footer d-flex justify-content-between">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Pilih Semua
+          </label>
+        </div>
+        <div>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-primary">Unggah</button>
+        </div>        
       </div>
     </div>
   </div>
